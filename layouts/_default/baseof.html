@@ -17,7 +17,7 @@
     <meta property="og:image" content="{{ if .IsPage }}{{ .Site.BaseURL }}{{ .Params.thumbnail }}{{ else }}{{ .Site.BaseURL }}{{ .Site.Params.thumbnail }}{{ end }}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ .Permalink }}">
-    <meta name="twitter:image" content="{{ if .IsPage }}{{ .Site.BaseURL }}{{ .Params.thumbnail }}{{ else }}{{ .Site.BaseURL }}{{ .Site.Params.thumbnail }}{{ end }}">
+    <meta name="twitter:image" content="{{ if .IsPage }}{{ .Site.BaseURL }}{{ .Params.thumbnail }}?{{ else }}{{ .Site.BaseURL }}{{ .Site.Params.thumbnail }}{{ end }}?">
 
     <base href="{{ .Permalink }}">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
